@@ -34,6 +34,10 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
     vendor/wave/prebuilt/etc/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/wave/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Build Snapdragon apps
 PRODUCT_PACKAGES += \
     SnapdragonGallery \
