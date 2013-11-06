@@ -153,3 +153,12 @@ PRODUCT_COPY_FILES +=  \
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+
+PRODUCT_GMS_CLIENTID_BASE ?= android-google
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+    ro.com.google.clientidbase.am=$(PRODUCT_GMS_CLIENTID_BASE)
+    ro.com.google.clientidbase.gmm=$(PRODUCT_GMS_CLIENTID_BASE)
+    ro.com.google.clientidbase.ms=$(PRODUCT_GMS_CLIENTID_BASE)
+    ro.com.google.clientidbase.yt=$(PRODUCT_GMS_CLIENTID_BASE)
+
