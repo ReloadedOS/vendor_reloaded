@@ -16,6 +16,7 @@
 android_library {
     name: "me.waveproject.framework",
     srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
     static_libs: [
         "androidx.preference_preference",
     ],
