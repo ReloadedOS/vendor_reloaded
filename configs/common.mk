@@ -162,3 +162,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.ms=$(PRODUCT_GMS_CLIENTID_BASE)
     ro.com.google.clientidbase.yt=$(PRODUCT_GMS_CLIENTID_BASE)
 
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
