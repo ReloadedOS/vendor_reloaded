@@ -31,6 +31,9 @@ PRODUCT_PACKAGES += \
 # Bluetooth Audio (A2DP)
 PRODUCT_PACKAGES += libbthost_if
 
+# Include explicitly to work around GMS issues
+PRODUCT_PACKAGES += libprotobuf-cpp-full
+
 # RCS Service
 PRODUCT_PACKAGES += \
     rcscommon \
