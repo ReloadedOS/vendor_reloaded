@@ -36,3 +36,6 @@ endif
 
 # Allow tethering without provisioning app
 ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
+
+# Don't Hide APNs
+ADDITIONAL_BUILD_PROPERTIES += persist.sys.hideapn=false
