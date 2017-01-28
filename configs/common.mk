@@ -28,5 +28,8 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# Bluetooth Audio (A2DP)
+PRODUCT_PACKAGES += libbthost_if
+
 # Props
 include vendor/wave/configs/props.mk
