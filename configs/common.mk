@@ -33,6 +33,9 @@ PRODUCT_PACKAGES += libbthost_if
 
 # RCS Service
 PRODUCT_PACKAGES += \
+    rcscommon \
+    rcscommon.xml \
+    rcsservice \
     rcs_service_aidl \
     rcs_service_aidl.xml \
     rcs_service_aidl_static \
