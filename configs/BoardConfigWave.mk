@@ -21,6 +21,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/wave/sepolicy/dynamic
 endif
 
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    vendor/wave/sepolicy/private
+
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     vendor/wave/sepolicy/public
 
