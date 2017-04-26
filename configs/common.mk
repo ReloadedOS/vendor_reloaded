@@ -25,6 +25,9 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# Copy wave specific init file
+PRODUCT_COPY_FILES += vendor/wave/prebuilt/root/init.wave.rc:root/init.wave.rc
+
 # Include hostapd configuration
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
