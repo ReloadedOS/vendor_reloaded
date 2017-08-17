@@ -35,7 +35,7 @@ function mka() {
         fi
     fi
 
-    schedtool -B -n 1 -e ionice -n 1 make -j$(($(nproc --all) * 2)) "$@"
+    m -j $(($(nproc --all) * 2)) "$@"
 }
 
 function breakfast()
