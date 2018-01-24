@@ -33,4 +33,10 @@
          If < 0, uses the value from HardwarePropertiesManager#getDeviceTemperatures. -->
     <integer name="config_warningTemperature">55</integer>
 
+    <!-- Whether to show activity indicators in the status bar -->
+    <bool name="config_showActivity">false</bool>
+
+    <!-- Whether to show wifi activity indicators in the status bar -->
+    <bool name="config_showWifiActivity">false</bool>
+
 </resources>
