@@ -74,3 +74,15 @@ PRODUCT_BOOT_JARS += tcmiface
 
 # Props
 include vendor/wave/configs/props.mk
+
+ifneq ($(HOST_OS),linux)
+ifneq ($(sdclang_already_warned),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+sdclang_already_warned := true
+endif
+else
+# include definitions for SDCLANG
+include vendor/wave/sdclang/sdclang.mk
+endif 
