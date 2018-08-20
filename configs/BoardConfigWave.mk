@@ -13,5 +13,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     vendor/wave/sepolicy/public
 
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    vendor/wave/sepolicy/vendor
+
 # Soong
 include vendor/wave/configs/BoardConfigSoong.mk
