@@ -25,7 +25,7 @@ WAVE_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(WAVE_TARGET_PACKAGE)
+	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(WAVE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(WAVE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(WAVE_TARGET_PACKAGE).md5sum
 	@echo -e ""
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
