@@ -85,6 +85,12 @@ PRODUCT_BOOT_JARS += tcmiface
 # Props
 include vendor/wave/configs/props.mk
 
+# Sounds
+include vendor/wave/configs/pixel2-audio_prebuilt.mk
+
+# Bootanimation
+include vendor/wave/configs/bootanimation.mk
+
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
 $(warning **********************************************)
@@ -95,4 +101,4 @@ endif
 else
 # include definitions for SDCLANG
 include vendor/wave/sdclang/sdclang.mk
-endif 
+endif
