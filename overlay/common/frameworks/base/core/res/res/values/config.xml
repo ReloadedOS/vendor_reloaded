@@ -40,4 +40,9 @@
     <!-- The threshold angle for any motion detection in auto-power save modes.
          In hundreths of a degree. -->
     <integer name="config_autoPowerModeThresholdAngle">45</integer>
+
+    <!-- Set up those curves -->
+    <dimen name="config_dialogCornerRadius">12.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">6.0dip</dimen>
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 </resources>
