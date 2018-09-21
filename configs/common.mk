@@ -12,6 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Include support for GApps backup
+PRODUCT_COPY_FILES += \
+    vendor/wave/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/wave/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/wave/prebuilt/bin/50-backuptool.sh:system/addon.d/50-backuptool.sh
+
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/wave/prebuilt/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/wave/prebuilt/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/wave/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Include hostapd configuration
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
