@@ -2,4 +2,7 @@
 PRODUCT_PACKAGES += \
     SettingsDark \
     SystemQSDark \
-    SystemDark
+    SystemDark \
+    SettingsBlack \
+    SystemUIBlack \
+    SystemBlack
