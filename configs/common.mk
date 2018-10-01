@@ -108,3 +108,6 @@ else
 # include definitions for SDCLANG
 include vendor/wave/sdclang/sdclang.mk
 endif
+
+# Disable qmi EAP-SIM security
+DISABLE_EAP_PROXY := true
