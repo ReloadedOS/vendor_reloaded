@@ -234,3 +234,8 @@ endif
 # DocumentsUI
 PRODUCT_PACKAGES += \
     PixelDocumentsUIGoogleOverlay
+
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
