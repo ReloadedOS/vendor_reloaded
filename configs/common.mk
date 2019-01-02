@@ -140,3 +140,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib,system/lib)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
 endif
+
+# Disable Java debug info
+USE_DEX2OAT_DEBUG := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
