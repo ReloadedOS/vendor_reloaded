@@ -14,14 +14,12 @@
 
 # perf blobs
 PRODUCT_PACKAGES += \
-    libqti-perfd-client_system \
-    libqti_performance \
     QPerformance \
-    vendor.qti.hardware.iop@1.0 \
-    vendor.qti.hardware.iop@2.0 \
-    vendor.qti.hardware.perf@1.0 \
     UxPerformance
 
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib,system/lib)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
