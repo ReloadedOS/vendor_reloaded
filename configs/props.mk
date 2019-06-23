@@ -39,3 +39,15 @@ ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
 
 # Don't Hide APNs
 ADDITIONAL_BUILD_PROPERTIES += persist.sys.hideapn=false
+
+# Branding Props
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.modversion=$(WAVE_VERSION)-$(shell date -u +%Y%m%d) \
+    ro.qti.caf.version=$(CAF_VERSION) \
+    ro.wave.version=$(WAVE_VERSION) \
+    ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
+    ro.wave.device=$(WAVE_BUILD) \
+    ro.wave.display.version=$(WAVE_VERSION) \
+    ro.wave.releasetype=$(WAVE_BUILDTYPE) \
+    ro.wave.build=$(PLATFORM_WAVE_BUILD_NUMBER) \
+    ro.wave.maintenance_patch=$(PLATFORM_WAVE_MAINTENANCE_PATCH)
