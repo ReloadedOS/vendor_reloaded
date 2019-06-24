@@ -82,8 +82,15 @@ PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += tcmiface
 PRODUCT_BOOT_JARS += tcmiface
 
-# Props
-include vendor/wave/configs/props.mk
+#SeLinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+ifeq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+else
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
+endif
 
 # Sounds
 include vendor/wave/configs/pixel2-audio_prebuilt.mk

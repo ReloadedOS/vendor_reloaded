@@ -24,16 +24,6 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.setupwizard.mode=OPTIONAL \
     ro.opa.eligible_device=true
 
-#SeLinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
-else
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
-endif
-
 # Allow tethering without provisioning app
 ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
 
