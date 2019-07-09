@@ -73,7 +73,7 @@ endif
 
 ifndef CAF_VERSION
   # Current CAF vserion.
-  CAF_VERSION := LA.UM.7.3.r1-07800-sdm845.0
+  CAF_VERSION := LA.UM.7.3.r1-07900-sdm845.0
 endif
 
 # Output target zip.
