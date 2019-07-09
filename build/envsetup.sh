@@ -7,14 +7,6 @@ EOF
 
 # Make using all available CPUs
 function mka() {
-    TARGET_HARDWARE_QCOM=$(get_build_var TARGET_HARDWARE_QCOM)
-    if [ -n "$TARGET_HARDWARE_QCOM" ] && [ "$TARGET_HARDWARE_QCOM" != " " ]; then
-        source $ANDROID_BUILD_TOP/vendor/wave/scripts/board_hals_setup.sh
-    else
-       echo -n "${color_failed}#### Add TARGET_HARDWARE_QCOM to your BoardConfig ####"${color_reset}
-       return 0
-    fi
-
     if [ -f $ANDROID_BUILD_TOP/$QTI_BUILDTOOLS_DIR/build/update-vendor-hal-makefiles.sh ]; then
         vendor_hal_script=$ANDROID_BUILD_TOP/$QTI_BUILDTOOLS_DIR/build/update-vendor-hal-makefiles.sh
         source $vendor_hal_script --check
