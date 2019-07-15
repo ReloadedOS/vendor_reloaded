@@ -98,9 +98,6 @@ endif
 # Sounds
 include vendor/wave/configs/pixel2-audio_prebuilt.mk
 
-# Include vendor sepolicy changes
-include vendor/wave/sepolicy/sepolicy.mk
-
 # Branding stuffs
 include vendor/wave/configs/branding.mk
 
