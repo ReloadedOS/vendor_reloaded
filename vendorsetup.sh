@@ -1,4 +1,4 @@
-caf_devices=('rolex')
+caf_devices=('rolex' 'oneplus3')
 
 function lunch_devices() {
     add_lunch_combo wave_${device}-userdebug
