@@ -44,10 +44,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-# Build Snapdragon apps
+# Build some apps
 PRODUCT_PACKAGES += \
     SnapdragonGallery \
-    SnapdragonMusic
+    Phonograph \
+    ViaBrowser \
+    MiXplorer \
+    MusicFX
 
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
