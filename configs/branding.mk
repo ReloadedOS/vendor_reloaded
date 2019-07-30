@@ -66,9 +66,9 @@ ifndef PLATFORM_WAVE_MAINTENANCE_PATCH
   PLATFORM_WAVE_MAINTENANCE_PATCH := 2019-07-01
 endif
 
-ifndef WAVE_BUILDTYPE
+ifndef WAVE_BUILD_TYPE
   # We build unofficial by default
-  WAVE_BUILDTYPE := unofficial
+  WAVE_BUILD_TYPE := UNOFFICIAL
 endif
 
 ifndef CAF_VERSION
@@ -76,5 +76,5 @@ ifndef CAF_VERSION
   CAF_VERSION := LA.UM.7.3.r1-07900-sdm845.0
 endif
 
-# Output target zip.
-WAVE_TARGET_ZIP := wave_$(WAVE_BUILD)-$(WAVE_VERSION)-$(shell date -u +%Y%m%d)-$(WAVE_BUILDTYPE).zip
+# Output target zip name
+WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-P-v$(WAVE_VERSION)-$(shell date -u +%Y%m%d)-$(WAVE_BUILD_TYPE).zip

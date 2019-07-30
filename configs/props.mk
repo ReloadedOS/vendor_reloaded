@@ -15,7 +15,7 @@
 # Override undesired Google defaults
 ADDITIONAL_BUILD_PROPERTIES += \
     keyguard.no_require_sim=true \
-    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.com.android.dateformat=dd-MM-yyyy \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.com.google.clientidbase=android-google \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -38,6 +38,6 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
     ro.wave.device=$(WAVE_BUILD) \
     ro.wave.display.version=$(WAVE_VERSION) \
-    ro.wave.releasetype=$(WAVE_BUILDTYPE) \
+    ro.wave.releasetype=$(WAVE_BUILD_TYPE) \
     ro.wave.build=$(PLATFORM_WAVE_BUILD_NUMBER) \
     ro.wave.maintenance_patch=$(PLATFORM_WAVE_MAINTENANCE_PATCH)
