@@ -124,3 +124,17 @@ endif
 
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
+
+# Add perf blobs if the device needs it
+ifeq ($(TARGET_NEEDS_PERF_BLOBS), true)
+PRODUCT_PACKAGES += \
+    QPerformance \
+    UxPerformance
+
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib,system/lib)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
+endif
