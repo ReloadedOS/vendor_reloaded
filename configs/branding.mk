@@ -77,4 +77,4 @@ ifndef CAF_VERSION
 endif
 
 # Output target zip name
-WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-P-v$(WAVE_VERSION)-$(shell date -u +%Y%m%d)-$(WAVE_BUILD_TYPE).zip
+WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-P-v$(WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip
