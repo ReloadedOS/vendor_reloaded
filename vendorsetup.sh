@@ -1,11 +1,7 @@
-caf_devices=('rolex' 'oneplus3')
-
-function lunch_devices() {
-    add_lunch_combo wave_${device}-userdebug
-}
+caf_devices=('rolex' 'oneplus3' 'A6020')
 
 for device in ${caf_devices[@]}; do
-    lunch_devices
+    add_lunch_combo wave_$device-userdebug
 done
 
 # SDClang Environment Variables
