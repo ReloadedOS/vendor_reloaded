@@ -127,6 +127,9 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib,system/lib)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
+PRODUCT_COPY_FILES += \
+    vendor/wave/performance/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
+    vendor/wave/performance/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc
 endif
 
 # Disable Java debug info
