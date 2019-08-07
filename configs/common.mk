@@ -131,7 +131,12 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/pr
 PRODUCT_COPY_FILES += \
     vendor/wave/performance/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
     vendor/wave/performance/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc \
-    vendor/wave/performance/proprietary/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite
+    vendor/wave/performance/proprietary/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite \
+    vendor/wave/performance/proprietary/lib64/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/extractors/libmmparser.so \
+    vendor/wave/performance/proprietary/lib/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib/extractors/libmmparser.so
+
+# Enable QCT resampler
+AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
 
 # IOP and Workload Classifier props
 PRODUCT_PROPERTY_OVERRIDES += \
