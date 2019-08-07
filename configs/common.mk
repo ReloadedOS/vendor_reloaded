@@ -119,7 +119,8 @@ DISABLE_EAP_PROXY := true
 ifeq ($(TARGET_NEEDS_PERF_BLOBS), true)
 PRODUCT_PACKAGES += \
     QPerformance \
-    UxPerformance
+    UxPerformance \
+    workloadclassifier
 
 PRODUCT_BOOT_JARS += \
     QPerformance \
@@ -129,7 +130,8 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/pr
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
 PRODUCT_COPY_FILES += \
     vendor/wave/performance/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
-    vendor/wave/performance/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc
+    vendor/wave/performance/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc \
+    vendor/wave/performance/proprietary/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite
 endif
 
 # Disable Java debug info
