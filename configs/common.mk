@@ -120,7 +120,8 @@ ifeq ($(TARGET_NEEDS_PERF_BLOBS), true)
 PRODUCT_PACKAGES += \
     QPerformance \
     UxPerformance \
-    workloadclassifier
+    workloadclassifier \
+    android.hidl.base@1.0
 
 PRODUCT_BOOT_JARS += \
     QPerformance \
