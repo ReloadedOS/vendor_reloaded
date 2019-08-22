@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
     Phonograph \
     ViaBrowser \
     MiXplorer \
-    MusicFX
+    MusicFX \
+    Longshot
 
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
