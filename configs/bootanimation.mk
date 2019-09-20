@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
-# Get Pixel 2 boot animation
-PRODUCT_COPY_FILES += \
-	vendor/wave/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+# Get Wave specific boot animation
+ifneq ($(TARGET_BOOT_ANIMATION_RES),)
+     PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/$(TARGET_BOOT_ANIMATION_RES).zip:system/media/bootanimation.zip
+else
+     $(warning define bootanimation resolution to use wave bootanimation.)
+     PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/aosp.zip:system/media/bootanimation.zip
+endif
