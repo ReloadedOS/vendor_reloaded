@@ -108,10 +108,14 @@ include vendor/wave/configs/bootanimation.mk
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
 
-# Disable Java debug info
+# Dex optimization
 USE_DEX2OAT_DEBUG := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
+    SystemUI
 
 # Fix Google Dialer
 PRODUCT_COPY_FILES +=  \
