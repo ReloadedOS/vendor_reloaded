@@ -13,7 +13,12 @@
 # limitations under the License.
 
 # Enable SIP+VoIP
-PRODUCT_COPY_FILES += frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Android Beam
+PRODUCT_COPY_FILES += \
+    vendor/wave/configs/permissions/android.software.nfc.beam.xml:system/etc/permissions/android.software.nfc.beam.xml
 
 # Include support for GApps backup
 PRODUCT_COPY_FILES += \
