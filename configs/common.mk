@@ -191,3 +191,8 @@ PRODUCT_COPY_FILES += \
 # Pixel Sounds
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/wave/prebuilt/media/audio/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
+
+# Themes
+PRODUCT_PACKAGES += \
+    ThemePicker \
+    WaveThemesStub
