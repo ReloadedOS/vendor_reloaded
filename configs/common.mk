@@ -97,6 +97,9 @@ else
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
 endif
 
+PRODUCT_PACKAGES += \
+    adb_root
+
 # Sounds
 include vendor/wave/configs/pixel2-audio_prebuilt.mk
 
