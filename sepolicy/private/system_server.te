@@ -3,4 +3,6 @@ allow system_server pocket_judge_sysfs:file rw_file_perms;
 
 allow system_server pocket_service:service_manager { add find };
 
+allow system_server adbroot_service:service_manager find;
+
 add_service(system_server, applock_service);
