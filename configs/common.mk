@@ -162,6 +162,15 @@ endif
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
 
+# Charger mode images
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+ifneq ($(TARGET_USES_AOSP_CHARGER),true)
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+endif
+
 # GCAM Go
 ifneq ($(TARGET_OPT_OUT_GCAM_GO),true)
 PRODUCT_PACKAGES += \
