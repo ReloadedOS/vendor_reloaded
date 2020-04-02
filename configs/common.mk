@@ -232,3 +232,7 @@ PRODUCT_PACKAGES += \
     unrar \
     vim \
     zip
+
+# Long Screenshot
+PRODUCT_PACKAGES += \
+    StitchImage
