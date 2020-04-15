@@ -21,7 +21,8 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.setupwizard.require_network=any \
     ro.setupwizard.mode=OPTIONAL \
-    ro.opa.eligible_device=true
+    ro.opa.eligible_device=true \
+    setupwizard.theme=glif_v3_light
 
 # Allow tethering without provisioning app
 ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
