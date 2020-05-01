@@ -217,3 +217,9 @@ PRODUCT_PACKAGES += \
 # Default permissions
 PRODUCT_COPY_FILES += \
     vendor/wave/configs/permissions/default-permissions-wave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-wave.xml
+
+# Use 64-bit dex2oat for better dexopt time
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
+endif
