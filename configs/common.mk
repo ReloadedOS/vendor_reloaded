@@ -143,8 +143,11 @@ endif
 PRODUCT_PACKAGES += \
     AccentColoriOSBlueOverlay \
     AccentColorHadalZoneOverlay \
+    AccentColorLeprechaunGreenOverlay \
     AccentColorLostInForestOverlay \
+    AccentColorLustRedOverlay \
     AccentColorMagentaOverlay \
+    AccentColorMysticRedOverlay \
     AccentColorPixelBlueOverlay \
     AccentColorPurpleHeatOverlay \
     AccentColorRedOverlay \
