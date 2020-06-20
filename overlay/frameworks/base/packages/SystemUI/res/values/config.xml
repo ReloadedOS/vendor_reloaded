@@ -27,7 +27,7 @@
     <bool name="config_show4GForLTE">false</bool>
 
     <!-- Whether to show activity indicators in the status bar -->
-    <bool name="config_showActivity">false</bool>
+    <bool name="config_showActivity">true</bool>
 
     <!-- Whether to show wifi activity indicators in the status bar -->
     <bool name="config_showWifiActivity">false</bool>
