@@ -23,10 +23,12 @@ endif
 WAVE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(WAVE_TARGET_ZIP)
 WAVE_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(WAVE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(WAVE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(WAVE_TARGET_PACKAGE).md5sum
+	$(hide) $(MD5) $(WAVE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(WAVE_TARGET_PACKAGE).md5sum
 	@echo -e ""
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
 	@echo -e ""
