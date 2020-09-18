@@ -46,3 +46,8 @@ SOONG_CONFIG_reloadedGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARG
 SOONG_CONFIG_reloadedGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_reloadedGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 SOONG_CONFIG_reloadedGlobalVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+
+# Qualcomm variables
+SOONG_CONFIG_NAMESPACES += aosp_vs_qva
+SOONG_CONFIG_aosp_vs_qva += aosp_or_qva
+SOONG_CONFIG_aosp_vs_qva_aosp_or_qva := qva
