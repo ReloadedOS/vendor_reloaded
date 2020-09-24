@@ -23,7 +23,7 @@ endif
 WAVE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(WAVE_TARGET_ZIP)
 WAVE_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 
-MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
