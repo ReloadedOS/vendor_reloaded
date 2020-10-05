@@ -202,4 +202,7 @@
     <!-- The name of the package that will hold the system gallery role. -->
     <string name="config_systemGallery" translatable="false">com.simplemobiletools.gallery.pro</string>
 
+    <!-- If this is true, long press on power button will be available from the non-interactive state -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
 </resources>
