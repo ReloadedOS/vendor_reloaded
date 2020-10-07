@@ -192,3 +192,6 @@ PRODUCT_PACKAGES += \
     FontInterOverlay
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
