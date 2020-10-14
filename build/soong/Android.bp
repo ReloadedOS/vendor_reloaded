@@ -1,12 +1,4 @@
 bootstrap_go_package {
-    name: "soong-wave",
-    pkgPath: "wave/soong/android",
-    srcs: [
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
     name: "soong-wave-generator",
     pkgPath: "wave/soong/generator",
     deps: [
