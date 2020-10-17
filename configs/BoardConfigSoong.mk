@@ -52,6 +52,7 @@ SOONG_CONFIG_waveQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEV
 
 # Set default values
 TARGET_INIT_VENDOR_LIB ?= vendor_init
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 
 # Soong value variables
 SOONG_CONFIG_waveGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
