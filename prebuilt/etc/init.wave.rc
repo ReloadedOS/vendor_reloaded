@@ -34,3 +34,7 @@ on property:sys.io.scheduler=*
 
 on property:persist.sys.io.scheduler=*
     setprop sys.io.scheduler ${persist.sys.io.scheduler}
+
+service vendor_flash_recovery /vendor/bin/install-recovery.sh
+    class main
+    disabled
