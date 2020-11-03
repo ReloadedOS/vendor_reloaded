@@ -129,6 +129,10 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
+
 PRODUCT_GMS_CLIENTID_BASE ?= android-google
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
