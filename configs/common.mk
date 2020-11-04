@@ -154,3 +154,7 @@ $(call inherit-product-if-exists, vendor/google/gms/config.mk)
 else
 $(warning Building vanilla - without gapps)
 endif
+
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig \
