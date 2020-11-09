@@ -166,3 +166,7 @@ ifneq ($(TARGET_OPT_OUT_GCAM_GO),true)
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
 endif
+
+# Immersive Navigation
+PRODUCT_PACKAGES += \
+    ImmersiveNavigationOverlay
