@@ -227,3 +227,7 @@ endif
 ifeq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
   ALLOW_MISSING_DEPENDENCIES := true
 endif
+
+# DocumentsUI
+PRODUCT_PACKAGES += \
+    PixelDocumentsUIGoogleOverlay
