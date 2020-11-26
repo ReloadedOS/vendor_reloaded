@@ -59,3 +59,8 @@ ADDITIONAL_BUILD_PROPERTIES += \
     persist.device_config.runtime_native_boot.iorap_perfetto_enable=true \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true \
     ro.iorapd.enable=true
+
+# Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
+# on supported devices with Deep Press input classifier HALs and models
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.input.video_enabled=false
