@@ -15,7 +15,7 @@
     limitations under the License.
 -->
 <resources>
-    <string-array name="device_config">
+     <string-array name="configs_base">
         <!-- Enable privacy indicators -->
         <item>privacy/permissions_hub_2_enabled=true</item>
         <item>privacy/permissions_hub_enabled=true</item>
