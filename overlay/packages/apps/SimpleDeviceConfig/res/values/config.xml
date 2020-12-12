@@ -40,6 +40,9 @@
         <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
         <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=148:https://storage.googleapis.com/music-iq-db/updatable_db_v2/20201006-025738/manifest.json</item>
 
+        <!-- Allow more cached apps in the background -->
+        <item>activity_manager/max_cached_processes=64</item>
+
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
     </string-array>
