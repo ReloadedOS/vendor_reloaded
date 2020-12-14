@@ -1,0 +1,24 @@
+//
+// Prebuilt apps for WaveOS
+//
+
+// ViaBrowser
+android_app_import {
+    name: "ViaBrowser",
+    apk: "ViaBrowser.apk",
+    presigned: true,
+    overrides: ["Browser2"],
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+// MiXplorer
+android_app_import {
+    name: "MiXplorer",
+    apk: "MiXplorer.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}

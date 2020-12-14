@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://github.com/Wave-Project/android_manifest/blob/p/wavebanner.png" >
-</p>
-
 # WaveOS #
 
 ### Getting started ###
@@ -10,7 +6,7 @@ To get started with manifest/WaveOS, you'll need to get familiar with [Repo](htt
 To initialize your local repository using the WaveOS trees, use a command like this:
 
 ```
-repo init -u https://github.com/Wave-Project/android_manifest -b p
+repo init -u https://github.com/Wave-Project/android_manifest -b r
 ```
 
 Then to sync up:
@@ -23,7 +19,7 @@ repo sync -c -f --force-sync --optimized-fetch --no-tags --no-clone-bundle --pru
 
 ```
 $ . build/envsetup.sh
-$ brunch wave_$device-userdebug
+$ brunch <device>
 ```
 -----------------------------------------------------------------------------
 Credits:

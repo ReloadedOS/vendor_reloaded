@@ -95,6 +95,7 @@ endif
 # Set soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/audio/$(QCOM_HARDWARE_VARIANT) \
+    hardware/qcom/display/$(QCOM_HARDWARE_VARIANT) \
     hardware/qcom/media/$(QCOM_HARDWARE_VARIANT)
 
 # Set HAL paths

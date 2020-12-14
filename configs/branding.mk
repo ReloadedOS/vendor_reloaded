@@ -16,14 +16,11 @@
 # Handle various build version information.
 #
 # Guarantees that the following are defined:
-#     WAVE_VERSION
-#     CAF_VERSION
+#     PLATFORM_WAVE_VERSION_NUMBER
 #     PLATFORM_WAVE_VERSION_CODE
-#     PLATFORM_WAVE_BUILD_NUMBER
-#     PLATFORM_WAVE_MAINTENANCE_PATCH
 #
 
-ifndef WAVE_VERSION
+ifndef PLATFORM_WAVE_VERSION_NUMBER
   # This is the global wave version that determines our releases
   # in various types. The types are defined as Major, Minor, and Maintenance.
   # Example of this syntax:
@@ -32,38 +29,14 @@ ifndef WAVE_VERSION
   #        may include system pacthes for improvements and small new features.
   # Maintenance: The third number indicates a maintenance system upgrade with
   #              small, but effective improvements throughout the system.
-  WAVE_VERSION := 1.0
+  PLATFORM_WAVE_VERSION_NUMBER := 4.0
 endif
 
 ifndef PLATFORM_WAVE_VERSION_CODE
   # As part of the Wave platform, each Major system upgrade is released
   # under a specific codename. The indicates which codename for which
   # major system upgrade under the Wave platform.
-  PLATFORM_WAVE_VERSION_CODE := Peppermint
-endif
-
-ifndef PLATFORM_WAVE_BUILD_NUMBER
-  # As part of the Wave platform, the Wave platform build number is a
-  # separate indication of our build id's, which help track what build
-  # on what particular version of wave. This allows generation new packages
-  # and specific makefiles when making multiple builds under the same version.
-  # Example of this syntax:
-  # WPBN: Wave Platform Build Number
-  # P8102: First indicates the (PLATFORM_WAVE_VERSION_CODE) followed by the reversed year.
-  # $(shell date -u +%d): Auto generated current day
-  # $(shell date -u +%m): Auto generated current month
-  # 646: Last 3 numbers are a reversed time code. Time codes are track from the current time
-  #      the (PLATFORM_WAVE_MAINTENANCE_PATCH) get's updated and so on.
-  PLATFORM_WAVE_BUILD_NUMBER := WPBN.P9102.$(shell date -u +%d).$(shell date -u +%m)001
-endif
-
-ifndef PLATFORM_WAVE_MAINTENANCE_PATCH
-  # As part of the wave platform, we include maintenance patches which
-  # ship with our (Minor + Maintenance) releases to indicate what level
-  # of maintenance has been applied across devices and builds. This uses
-  # the same logic as Android's security patch level, except it is updated
-  # simultaneously and not on a monthly iteration.
-  PLATFORM_WAVE_MAINTENANCE_PATCH := 2019-07-01
+  PLATFORM_WAVE_VERSION_CODE := Rasmalai
 endif
 
 ifndef WAVE_BUILD_TYPE
@@ -71,10 +44,5 @@ ifndef WAVE_BUILD_TYPE
   WAVE_BUILD_TYPE := UNOFFICIAL
 endif
 
-ifndef CAF_VERSION
-  # Current CAF vserion.
-  CAF_VERSION := LA.UM.7.1.r1-16300-sm8150.0
-endif
-
 # Output target zip name
-WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-P-v$(WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip
+WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION_NUMBER)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip

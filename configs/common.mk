@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/qcom/common/common.mk
-
 # Enable SIP+VoIP
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
@@ -34,7 +32,7 @@ endif
 PRODUCT_COPY_FILES += vendor/wave/prebuilt/root/init.wave.rc:root/init.wave.rc
 
 # Include vendor overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/wave/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/wave/overlay
 
 # Include hostapd configuration
 PRODUCT_COPY_FILES += \
@@ -48,12 +46,8 @@ PRODUCT_COPY_FILES += \
 
 # Build some apps
 PRODUCT_PACKAGES += \
-    SnapdragonGallery \
-    Phonograph \
     ViaBrowser \
-    MiXplorer \
-    MusicFX \
-    Longshot
+    MiXplorer
 
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
@@ -110,43 +104,8 @@ include vendor/wave/configs/branding.mk
 # Bootanimation
 include vendor/wave/configs/bootanimation.mk
 
-# Themes
-include vendor/wave/configs/themes.mk
-
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
-
-# Add perf blobs if the device needs it
-ifeq ($(TARGET_NEEDS_PERF_BLOBS), true)
-PRODUCT_PACKAGES += \
-    QPerformance \
-    UxPerformance \
-    workloadclassifier \
-    android.hidl.base@1.0
-
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib,system/lib)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/wave/performance/proprietary/lib64,system/lib64)
-PRODUCT_COPY_FILES += \
-    vendor/wave/performance/proprietary/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM)/bin/perfservice \
-    vendor/wave/performance/proprietary/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/perfservice.rc \
-    vendor/wave/performance/proprietary/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite \
-    vendor/wave/performance/proprietary/lib64/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/extractors/libmmparser.so \
-    vendor/wave/performance/proprietary/lib/extractors/libmmparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib/extractors/libmmparser.so
-
-# Enable QCT resampler
-AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
-
-# IOP and Workload Classifier props
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.iop.enable_uxe=1 \
-    vendor.perf.iop_v3.enable=true \
-    vendor.perf.gestureflingboost.enable=true \
-    vendor.perf.workloadclassifier.enable=true
-endif
 
 # Disable Java debug info
 USE_DEX2OAT_DEBUG := false

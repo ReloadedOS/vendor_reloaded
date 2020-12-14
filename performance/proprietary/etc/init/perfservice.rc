@@ -1,4 +1,0 @@
-service vendor.perfservice /system/bin/perfservice
-    class main
-    user system
-    group system readproc
