@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Copy wave specific init file
-PRODUCT_COPY_FILES += vendor/wave/prebuilt/root/init.wave.rc:root/init.wave.rc
+PRODUCT_COPY_FILES += \
+    vendor/wave/prebuilt/etc/init.wave.rc:system/etc/init/init.wave.rc
 
 # Include vendor overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/wave/overlay
