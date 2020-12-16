@@ -83,10 +83,6 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-# TCP Connection Management
-PRODUCT_PACKAGES += tcmiface
-PRODUCT_BOOT_JARS += tcmiface
-
 #SeLinux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
