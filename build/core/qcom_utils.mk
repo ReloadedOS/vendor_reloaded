@@ -2,9 +2,12 @@
 # TARGET_BOARD_PLATFORM specific featurization
 
 # Platform name variables - used in makefiles everywhere
+KONA := kona #SM8250
+LITO := lito #SM7250
 MSMNILE := msmnile #SM8150
 MSMSTEPPE := sm6150
 TRINKET := trinket #SM6125
+ATOLL := atoll #SM6250
 
 # A Family
 QCOM_BOARD_PLATFORMS += msm7x27a
@@ -34,15 +37,19 @@ QCOM_BOARD_PLATFORMS += msm8952
 QCOM_BOARD_PLATFORMS += msm8937
 QCOM_BOARD_PLATFORMS += msm8953
 QCOM_BOARD_PLATFORMS += msm8996
-QCOM_BOARD_PLATFORMS += msm8998
 
+QCOM_BOARD_PLATFORMS += msm8998
 QCOM_BOARD_PLATFORMS += sdm660
+
 QCOM_BOARD_PLATFORMS += sdm710
 QCOM_BOARD_PLATFORMS += sdm845
 
+QCOM_BOARD_PLATFORMS += $(KONA)
+QCOM_BOARD_PLATFORMS += $(LITO)
 QCOM_BOARD_PLATFORMS += $(TRINKET)
 QCOM_BOARD_PLATFORMS += $(MSMSTEPPE)
 QCOM_BOARD_PLATFORMS += $(MSMNILE)
+QCOM_BOARD_PLATFORMS += $(ATOLL)
 
 # MSM7000 Family
 MSM7K_BOARD_PLATFORMS := msm7x30
@@ -53,8 +60,6 @@ MSM7K_BOARD_PLATFORMS += msm7k
 QSD8K_BOARD_PLATFORMS := qsd8k
 
 # vars for use by utils
-empty :=
-space := $(empty) $(empty)
 colon := $(empty):$(empty)
 underscore := $(empty)_$(empty)
 
