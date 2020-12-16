@@ -16,11 +16,11 @@
 # Handle various build version information.
 #
 # Guarantees that the following are defined:
-#     PLATFORM_WAVE_VERSION_NUMBER
+#     PLATFORM_WAVE_VERSION
 #     PLATFORM_WAVE_VERSION_CODE
 #
 
-ifndef PLATFORM_WAVE_VERSION_NUMBER
+ifndef PLATFORM_WAVE_VERSION
   # This is the global wave version that determines our releases
   # in various types. The types are defined as Major, Minor, and Maintenance.
   # Example of this syntax:
@@ -29,7 +29,7 @@ ifndef PLATFORM_WAVE_VERSION_NUMBER
   #        may include system pacthes for improvements and small new features.
   # Maintenance: The third number indicates a maintenance system upgrade with
   #              small, but effective improvements throughout the system.
-  PLATFORM_WAVE_VERSION_NUMBER := 4.0
+  PLATFORM_WAVE_VERSION := 4.0
 endif
 
 ifndef PLATFORM_WAVE_VERSION_CODE
@@ -45,4 +45,4 @@ ifndef WAVE_BUILD_TYPE
 endif
 
 # Output target zip name
-WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION_NUMBER)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip
+WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip

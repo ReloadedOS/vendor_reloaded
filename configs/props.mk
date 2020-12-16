@@ -14,7 +14,6 @@
 
 # Override undesired Google defaults
 ADDITIONAL_BUILD_PROPERTIES += \
-    keyguard.no_require_sim=true \
     ro.com.android.dateformat=dd-MM-yyyy \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -27,13 +26,9 @@ ADDITIONAL_BUILD_PROPERTIES += \
 # Allow tethering without provisioning app
 ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
 
-# Don't Hide APNs
-ADDITIONAL_BUILD_PROPERTIES += persist.sys.hideapn=false
-
 # Branding Props
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.modversion=$(WAVE_VERSION)-$(shell date -u +%Y%m%d) \
-    ro.wave.version=$(PLATFORM_WAVE_VERSION_NUMBER) \
+    ro.wave.version=$(PLATFORM_WAVE_VERSION) \
     ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
     ro.wave.device=$(WAVE_BUILD) \
     ro.wave.display.version=$(PLATFORM_WAVE_VERSION_NUMBER) \
