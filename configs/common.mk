@@ -53,7 +53,8 @@ PRODUCT_COPY_FILES += \
 # Build some apps
 PRODUCT_PACKAGES += \
     ViaBrowser \
-    MiXplorer
+    MiXplorer \
+    ExactCalculator
 
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
