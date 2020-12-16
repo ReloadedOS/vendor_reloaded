@@ -22,3 +22,6 @@ function brunch()
     fi
     return $?
 }
+
+# Disable ABI checking
+export SKIP_ABI_CHECKS=true
