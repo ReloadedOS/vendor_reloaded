@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- These resources are around just to allow their values to be customized -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- The color of the background in the top part of QSCustomizer -->
+    <color name="qs_customize_background">@android:color/black</color>
+
+    <!-- The color of the background in the bottom part of QSCustomizer -->
+    <color name="qs_customize_decoration">@android:color/black</color>
+
+</resources>
