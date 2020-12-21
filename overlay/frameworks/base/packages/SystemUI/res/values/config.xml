@@ -49,4 +49,7 @@
         <item>com.android.systemui</item>
         <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
+
+    <!-- The number of columns in the QuickSettings -->
+    <integer name="quick_settings_num_columns">4</integer>
 </resources>
