@@ -146,3 +146,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
     ro.surface_flinger.supports_background_blur=1
+
+# GApps
+ifneq ($(VANILLA_BUILD),true)
+$(warning Building with gapps)
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+else
+$(warning Building vanilla - without gapps)
+endif
