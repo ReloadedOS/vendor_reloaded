@@ -88,10 +88,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# Disable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
+# Enable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 PRODUCT_PACKAGES += \
