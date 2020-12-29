@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 Wave-OS
+# Copyright (C) 2020 Wave-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,9 +15,12 @@
 #
 
 # Get Wave specific boot animation
-ifneq ($(TARGET_BOOT_ANIMATION_RES),)
+TARGET_BOOT_ANIMATION_RES := $(strip $(TARGET_BOOT_ANIMATION_RES))
+
+ifneq ($(filter $(TARGET_BOOT_ANIMATION_RES),720 1080 1440),)
      PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/$(TARGET_BOOT_ANIMATION_RES).zip:system/media/bootanimation.zip
 else
-     $(warning define bootanimation resolution to use wave bootanimation.)
+     $(warning Invalid bootanimation resolution: $(TARGET_BOOT_ANIMATION_RES). Defaulting to AOSP bootanimation.)
+     $(warning Define TARGET_BOOT_ANIMATION_RES to 480/720/1080/1440 to use wave bootanimation)
      PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/aosp.zip:system/media/bootanimation.zip
 endif
