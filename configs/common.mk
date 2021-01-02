@@ -160,3 +160,9 @@ endif
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
+
+# GCAM Go
+ifneq ($(TARGET_OPT_OUT_GCAM_GO),true)
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt
+endif
