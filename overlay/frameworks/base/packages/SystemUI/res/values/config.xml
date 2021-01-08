@@ -52,4 +52,7 @@
 
     <!-- The number of columns in the QuickSettings -->
     <integer name="quick_settings_num_columns">4</integer>
+
+    <!-- Whether or not the button to clear all notifications will be shown. -->
+    <bool name="config_enableNotificationsClearAll">false</bool>
 </resources>
