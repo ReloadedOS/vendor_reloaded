@@ -189,3 +189,5 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     FontInterOverlay
+
+$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
