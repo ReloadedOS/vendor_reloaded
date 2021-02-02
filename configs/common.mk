@@ -192,6 +192,11 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
+# Accents
+PRODUCT_PACKAGES += \
+    AccentColoriOSBlueOverlay \
+    AccentColorPixelBlueOverlay
+
 # Fonts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/wave/prebuilt/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
@@ -199,6 +204,7 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 PRODUCT_PACKAGES += \
+    FontGoogleSansLatoOverlay \
     FontInterOverlay \
     FontOnePlusSansOverlay
 
