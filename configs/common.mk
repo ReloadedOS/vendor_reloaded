@@ -199,7 +199,8 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 PRODUCT_PACKAGES += \
-    FontInterOverlay
+    FontInterOverlay \
+    FontOnePlusSansOverlay
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 
