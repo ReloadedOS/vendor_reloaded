@@ -195,6 +195,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Fonts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/wave/prebuilt/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    $(call find-copy-subdir-files,*,vendor/wave/prebuilt/fonts-system/,$(TARGET_COPY_OUT_SYSTEM)/fonts) \
     vendor/wave/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 PRODUCT_PACKAGES += \
