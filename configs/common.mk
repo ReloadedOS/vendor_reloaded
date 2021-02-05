@@ -54,7 +54,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ViaBrowser \
     MiXplorer \
-    ExactCalculator
+    ExactCalculator \
+    SimpleGallery
 
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
