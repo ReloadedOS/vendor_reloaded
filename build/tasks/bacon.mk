@@ -25,6 +25,8 @@ WAVE_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
+ifndef PROD_OTA_PACKAGE_TARGET
+
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(WAVE_TARGET_PACKAGE)
@@ -47,3 +49,5 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"Size   : "${CL_MAG}" $(shell du -hs $(WAVE_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
 	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
 	@echo -e ""
+
+endif

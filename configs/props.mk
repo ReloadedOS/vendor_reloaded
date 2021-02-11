@@ -30,6 +30,4 @@ ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.wave.version=$(PLATFORM_WAVE_VERSION) \
     ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
-    ro.wave.device=$(WAVE_BUILD) \
-    ro.wave.display.version=$(PLATFORM_WAVE_VERSION_NUMBER) \
-    ro.wave.releasetype=$(WAVE_BUILD_TYPE)
+    ro.wave.device=$(WAVE_BUILD)

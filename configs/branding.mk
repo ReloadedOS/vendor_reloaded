@@ -39,10 +39,5 @@ ifndef PLATFORM_WAVE_VERSION_CODE
   PLATFORM_WAVE_VERSION_CODE := Rasmalai
 endif
 
-ifndef WAVE_BUILD_TYPE
-  # We build unofficial by default
-  WAVE_BUILD_TYPE := UNOFFICIAL
-endif
-
 # Output target zip name
-WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(WAVE_BUILD_TYPE).zip
+WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-UNOFFICIAL.zip
