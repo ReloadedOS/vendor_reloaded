@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
 # Build some apps
 PRODUCT_PACKAGES += \
     ViaBrowser \
-    MiXplorer \
     ExactCalculator \
     SimpleGallery
 

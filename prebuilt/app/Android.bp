@@ -13,16 +13,6 @@ android_app_import {
     },
 }
 
-// MiXplorer
-android_app_import {
-    name: "MiXplorer",
-    apk: "MiXplorer.apk",
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-}
-
 android_app_import {
     name: "SimpleGallery",
     apk: "SimpleGallery.apk",
