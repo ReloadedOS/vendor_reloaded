@@ -128,10 +128,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_COPY_FILES +=  \
     vendor/wave/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
-# Pixel sysconfig
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
-
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
