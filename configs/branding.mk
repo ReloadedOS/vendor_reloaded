@@ -29,7 +29,7 @@ ifndef PLATFORM_WAVE_VERSION
   #        may include system pacthes for improvements and small new features.
   # Maintenance: The third number indicates a maintenance system upgrade with
   #              small, but effective improvements throughout the system.
-  PLATFORM_WAVE_VERSION := 4.0
+  PLATFORM_WAVE_VERSION := 4.1
 endif
 
 ifndef PLATFORM_WAVE_VERSION_CODE
