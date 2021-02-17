@@ -235,3 +235,8 @@ PRODUCT_PACKAGES += \
 # Long Screenshot
 PRODUCT_PACKAGES += \
     StitchImage
+
+# Fix for missing aeabi symbols on old blobs
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib/libcompiler_rt.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib64/libcompiler_rt.so
