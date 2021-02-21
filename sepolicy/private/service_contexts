@@ -1,1 +1,2 @@
 pocket                                    u:object_r:pocket_service:s0
+applock                                   u:object_r:applock_service:s0
