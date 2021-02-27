@@ -36,6 +36,7 @@ SOONG_CONFIG_waveGlobalVars += \
 
 SOONG_CONFIG_NAMESPACES += waveQcomVars
 SOONG_CONFIG_waveQcomVars += \
+    legacy_hw_disk_encryption \
     supports_extended_compress_format \
     uses_pre_uplink_features_netmgrd \
     uses_qti_camera_device \
@@ -48,6 +49,7 @@ SOONG_CONFIG_waveQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_waveQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_waveQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_waveQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_waveQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
