@@ -240,3 +240,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib64/libcompiler_rt.so
+
+# IORap
+PRODUCT_PROPERTY_OVERRIDES += \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true \
+    ro.iorapd.enable=true
