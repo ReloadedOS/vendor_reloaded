@@ -15,6 +15,12 @@
 # WaveOS signed builds
 $(call inherit-product-if-exists, vendor/wave-stonks/build/target/product/wave.mk)
 
+# Branding stuffs
+include vendor/wave/configs/branding.mk
+
+# Bootanimation
+include vendor/wave/configs/bootanimation.mk
+
 # Android Beam
 PRODUCT_COPY_FILES += \
     vendor/wave/configs/permissions/android.software.nfc.beam.xml:system/etc/permissions/android.software.nfc.beam.xml
@@ -67,15 +73,6 @@ PRODUCT_PACKAGES += \
 # ADB
 PRODUCT_PACKAGES += \
     adb_root
-
-# Sounds
-include vendor/wave/configs/pixel2-audio_prebuilt.mk
-
-# Branding stuffs
-include vendor/wave/configs/branding.mk
-
-# Bootanimation
-include vendor/wave/configs/bootanimation.mk
 
 # Dex optimization
 USE_DEX2OAT_DEBUG := false
@@ -190,3 +187,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib64/libcompiler_rt.so
+
+# Pixel Sounds
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/wave/prebuilt/media/audio/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)

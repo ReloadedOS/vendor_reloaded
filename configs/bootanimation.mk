@@ -18,9 +18,9 @@
 TARGET_BOOT_ANIMATION_RES := $(strip $(TARGET_BOOT_ANIMATION_RES))
 
 ifneq ($(filter $(TARGET_BOOT_ANIMATION_RES),720 1080 1440),)
-     PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/$(TARGET_BOOT_ANIMATION_RES).zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/wave/prebuilt/media/bootanimation/$(TARGET_BOOT_ANIMATION_RES).zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else
      $(warning Invalid bootanimation resolution: $(TARGET_BOOT_ANIMATION_RES). Defaulting to AOSP bootanimation.)
      $(warning Define TARGET_BOOT_ANIMATION_RES to 480/720/1080/1440 to use wave bootanimation)
-     PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/media/bootanimation/aosp.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/wave/prebuilt/media/bootanimation/aosp.zip:system/media/bootanimation.zip
 endif
