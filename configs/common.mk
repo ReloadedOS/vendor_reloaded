@@ -19,19 +19,6 @@ $(call inherit-product-if-exists, vendor/wave-stonks/build/target/product/wave.m
 PRODUCT_COPY_FILES += \
     vendor/wave/configs/permissions/android.software.nfc.beam.xml:system/etc/permissions/android.software.nfc.beam.xml
 
-# Include support for GApps backup
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/wave/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/wave/prebuilt/bin/50-backuptool.sh:system/addon.d/50-backuptool.sh
-
-ifeq ($(AB_OTA_UPDATER),true)
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/wave/prebuilt/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/wave/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
-endif
-
 # Copy wave specific init file
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/etc/init.wave.rc:system/etc/init/init.wave.rc
