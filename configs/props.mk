@@ -21,13 +21,39 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.setupwizard.require_network=any \
     ro.setupwizard.mode=OPTIONAL \
     ro.opa.eligible_device=true \
+    ro.storage_manager.enabled=true \
     setupwizard.theme=glif_v3_light
 
-# Allow tethering without provisioning app
-ADDITIONAL_BUILD_PROPERTIES += net.tethering.noprovisioning=true
-
-# Branding Props
+# WaveOS Branding
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.wave.version=$(PLATFORM_WAVE_VERSION) \
     ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
     ro.wave.device=$(WAVE_BUILD)
+
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# Disable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+else
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
+
+# GMS
+PRODUCT_GMS_CLIENTID_BASE ?= android-google
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE) \
+    ro.com.google.clientidbase.am=$(PRODUCT_GMS_CLIENTID_BASE) \
+    ro.com.google.clientidbase.gmm=$(PRODUCT_GMS_CLIENTID_BASE) \
+    ro.com.google.clientidbase.ms=$(PRODUCT_GMS_CLIENTID_BASE) \
+    ro.com.google.clientidbase.yt=$(PRODUCT_GMS_CLIENTID_BASE)
+
+# Blurs
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+
+# IORap
+ADDITIONAL_BUILD_PROPERTIES += \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true \
+    ro.iorapd.enable=true

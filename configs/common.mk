@@ -15,10 +15,6 @@
 # WaveOS signed builds
 $(call inherit-product-if-exists, vendor/wave-stonks/build/target/product/wave.mk)
 
-# Enable SIP+VoIP
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
 # Android Beam
 PRODUCT_COPY_FILES += \
     vendor/wave/configs/permissions/android.software.nfc.beam.xml:system/etc/permissions/android.software.nfc.beam.xml
@@ -70,12 +66,6 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
-# Bluetooth Audio (A2DP)
-PRODUCT_PACKAGES += libbthost_if
-
-# Include explicitly to work around GMS issues
-PRODUCT_PACKAGES += libprotobuf-cpp-full
-
 # RCS Service
 PRODUCT_PACKAGES += \
     rcscommon \
@@ -87,18 +77,7 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-#SeLinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# Disable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-else
-# Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
+# ADB
 PRODUCT_PACKAGES += \
     adb_root
 
@@ -110,9 +89,6 @@ include vendor/wave/configs/branding.mk
 
 # Bootanimation
 include vendor/wave/configs/bootanimation.mk
-
-# Disable qmi EAP-SIM security
-DISABLE_EAP_PROXY := true
 
 # Dex optimization
 USE_DEX2OAT_DEBUG := false
@@ -132,22 +108,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     QuickAccessWallet
 
-PRODUCT_GMS_CLIENTID_BASE ?= android-google
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-    ro.com.google.clientidbase.am=$(PRODUCT_GMS_CLIENTID_BASE)
-    ro.com.google.clientidbase.gmm=$(PRODUCT_GMS_CLIENTID_BASE)
-    ro.com.google.clientidbase.ms=$(PRODUCT_GMS_CLIENTID_BASE)
-    ro.com.google.clientidbase.yt=$(PRODUCT_GMS_CLIENTID_BASE)
-
 # WaveOS Widget
 PRODUCT_PACKAGES += \
     WaveWidget
-
-# Blurs
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
 
 # GApps
 ifneq ($(VANILLA_BUILD),true)
@@ -240,9 +203,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib64/libcompiler_rt.so
-
-# IORap
-PRODUCT_PROPERTY_OVERRIDES += \
-    iorapd.perfetto.enable=true \
-    iorapd.readahead.enable=true \
-    ro.iorapd.enable=true
