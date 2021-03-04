@@ -20,24 +20,9 @@
 #     PLATFORM_WAVE_VERSION_CODE
 #
 
-ifndef PLATFORM_WAVE_VERSION
-  # This is the global wave version that determines our releases
-  # in various types. The types are defined as Major, Minor, and Maintenance.
-  # Example of this syntax:
-  # Major: The first number indicates a major system upgrade
-  # Minor: The second number indicates a minor system upgrade which
-  #        may include system pacthes for improvements and small new features.
-  # Maintenance: The third number indicates a maintenance system upgrade with
-  #              small, but effective improvements throughout the system.
-  PLATFORM_WAVE_VERSION := 4.1
-endif
-
-ifndef PLATFORM_WAVE_VERSION_CODE
-  # As part of the Wave platform, each Major system upgrade is released
-  # under a specific codename. The indicates which codename for which
-  # major system upgrade under the Wave platform.
-  PLATFORM_WAVE_VERSION_CODE := Rasmalai
-endif
+# WaveOS 4.x - Android 11
+PLATFORM_WAVE_VERSION := 4.1
+PLATFORM_WAVE_VERSION_CODE := Rasmalai
 
 # Output target zip name
 WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-UNOFFICIAL.zip
