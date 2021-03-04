@@ -1,2 +1,6 @@
 # USB HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.basic u:object_r:hal_usb_default_exec:s0
+
+# compiler-rt lib
+/(vendor|system/vendor)/lib/libcompiler_rt\.so u:object_r:same_process_hal_file:s0
+
