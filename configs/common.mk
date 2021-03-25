@@ -192,6 +192,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/wave/prebuilt/media/audio/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=End_note.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
+
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
