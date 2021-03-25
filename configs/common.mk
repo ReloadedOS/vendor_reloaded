@@ -196,3 +196,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ThemePicker \
     WaveThemesStub
+
+# Default permissions
+PRODUCT_COPY_FILES += \
+    vendor/wave/configs/permissions/default-permissions-wave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-wave.xml
