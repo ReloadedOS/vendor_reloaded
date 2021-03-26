@@ -200,7 +200,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
-    WaveThemesStub
+    WaveThemesStub \
+    WaveBalls
 
 # Default permissions
 PRODUCT_COPY_FILES += \
