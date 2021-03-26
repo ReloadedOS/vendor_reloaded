@@ -141,7 +141,18 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Accents
 PRODUCT_PACKAGES += \
     AccentColoriOSBlueOverlay \
-    AccentColorPixelBlueOverlay
+    AccentColorHadalZoneOverlay \
+    AccentColorLostInForestOverlay \
+    AccentColorMagentaOverlay \
+    AccentColorPixelBlueOverlay \
+    AccentColorPurpleHeatOverlay \
+    AccentColorRedOverlay \
+    AccentColorRoseOverlay \
+    AccentColorScooterOverlay \
+    AccentColorSlateOverlay \
+    AccentColorSuperNovaOverlay \
+    AccentColorTealOverlay \
+    AccentColorTorchRedOverlay
 
 # Fonts
 PRODUCT_COPY_FILES += \
