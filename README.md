@@ -1,0 +1,1 @@
+# WaveOS vendor component
