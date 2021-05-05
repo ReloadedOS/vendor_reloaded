@@ -12,7 +12,8 @@ REMOTE="wave"
 BRANCH="r"
 
 BLACKLIST="manifest \
-packages/apps/Gallery2"
+packages/apps/Gallery2 \
+prebuilts/clang/host/linux-x86"
 
 # fetch tag from user
 read -p "Enter the AOSP tag you wanna merge: " TAG
