@@ -25,3 +25,6 @@ function brunch()
 
 # Disable ABI checking
 export SKIP_ABI_CHECKS=true
+
+# Enable global ThinLTO
+export GLOBAL_THINLTO=true
