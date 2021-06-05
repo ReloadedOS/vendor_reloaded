@@ -64,3 +64,9 @@ ADDITIONAL_BUILD_PROPERTIES += \
 # on supported devices with Deep Press input classifier HALs and models
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.input.video_enabled=false
+
+# Disable extra StrictMode features on all non-engineering builds
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+ADDITIONAL_BUILD_PROPERTIES += \
+    persist.sys.strictmode.disable=true
+endif
