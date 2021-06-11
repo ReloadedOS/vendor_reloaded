@@ -17,12 +17,12 @@
 #
 # Guarantees that the following are defined:
 #     PLATFORM_WAVE_VERSION
-#     PLATFORM_WAVE_VERSION_CODE
+#     PLATFORM_WAVE_FLAVOUR
 #
 
 # WaveOS 4.x - Android 11
 PLATFORM_WAVE_VERSION := 4.5-stable1
-PLATFORM_WAVE_VERSION_CODE := Rasmalai
+PLATFORM_WAVE_FLAVOUR := Rasmalai
 
 # Output target zip name
 WAVE_TARGET_ZIP := WaveOS_$(WAVE_BUILD)-R-v$(PLATFORM_WAVE_VERSION)-$(shell date -u +%Y%m%d-%H%M)-UNOFFICIAL.zip

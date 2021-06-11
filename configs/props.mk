@@ -27,7 +27,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
 # WaveOS Branding
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.wave.version=$(PLATFORM_WAVE_VERSION) \
-    ro.wave.version_code=$(PLATFORM_WAVE_VERSION_CODE) \
+    ro.wave.flavour=$(PLATFORM_WAVE_FLAVOUR) \
     ro.wave.device=$(WAVE_BUILD)
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
