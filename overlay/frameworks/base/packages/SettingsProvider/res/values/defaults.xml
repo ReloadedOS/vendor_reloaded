@@ -22,4 +22,7 @@
 
     <!-- Enable Wi-Fi by default -->
     <bool name="def_wifi_on">true</bool>
+
+    <!-- Disable UI touch sounds by default -->
+    <bool name="def_sound_effects_enabled">false</bool>
 </resources>
