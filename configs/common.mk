@@ -97,6 +97,8 @@ PRODUCT_PACKAGES += \
 # GApps
 ifneq ($(VANILLA_BUILD),true)
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
+PRODUCT_PACKAGES += \
+    messaging
 else
 $(warning Building vanilla - without gapps)
 endif
