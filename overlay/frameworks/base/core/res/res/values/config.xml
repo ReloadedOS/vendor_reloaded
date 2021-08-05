@@ -186,4 +186,8 @@
 
     <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
     <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+
+    <!-- The name of the package that will hold the system gallery role. -->
+    <string name="config_systemGallery" translatable="false">com.simplemobiletools.gallery.pro</string>
+
 </resources>
