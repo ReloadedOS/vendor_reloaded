@@ -54,8 +54,7 @@
         <!-- Cached app freezer on supported devices -->
         <item>activity_manager_native_boot/use_freezer=true</item>
 
-        <!-- Enable IORap features -->
-        <item>runtime_native_boot/iorap_perfetto_enable=true</item>
+        <!-- Enable IORap readahead -->
         <item>runtime_native_boot/iorap_readahead_enable=true</item>
 
         <!--
