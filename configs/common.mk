@@ -216,9 +216,10 @@ PRODUCT_PACKAGES += \
     WaveThemesStub \
     WaveBalls
 
-# Default permissions
+# Permissions
 PRODUCT_COPY_FILES += \
-    vendor/wave/configs/permissions/default-permissions-wave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-wave.xml
+    vendor/wave/configs/permissions/default-permissions-wave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-wave.xml \
+    vendor/wave/configs/permissions/privapp-permissions-wave-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-wave-system-ext.xml
 
 # Use 64-bit dex2oat for better dexopt time
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
