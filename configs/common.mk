@@ -239,5 +239,5 @@ PRODUCT_PACKAGES += \
 
 # Cutout control overlays
 PRODUCT_PACKAGES += \
-    HideCutout \
-    StatusBarStock
+    HideCutoutOverlay \
+    StatusBarStockOverlay

@@ -1,5 +1,5 @@
 android_app {
-    name: "HideCutout",
+    name: "HideCutoutOverlay",
     resource_dirs: ["res"],
     platform_apis: true,
     certificate: "platform",
