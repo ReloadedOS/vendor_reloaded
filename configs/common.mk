@@ -99,8 +99,11 @@ ifneq ($(VANILLA_BUILD),true)
 $(call inherit-product-if-exists, vendor/google/gms/config.mk)
 else
 $(warning Building vanilla - without gapps)
-PRODUCT_PACKAGES += \
-    messaging
+PRODUCT_PACKAGES += messaging
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Titania.ogg \
+    ro.config.notification_sound=Tethys.ogg \
+    ro.config.alarm_alert=Carbon.ogg
 endif
 
 # Config
@@ -203,15 +206,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib/libcompiler_rt.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcompiler_rt.so:vendor/lib64/libcompiler_rt.so
-
-# Pixel Sounds
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/wave/prebuilt/media/audio/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=End_note.ogg \
-    ro.config.alarm_alert=Bright_morning.ogg
 
 # Themes
 PRODUCT_PACKAGES += \
