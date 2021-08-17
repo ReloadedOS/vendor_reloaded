@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
     AccentColorMagentaOverlay \
     AccentColorMysticRedOverlay \
     AccentColorPixelBlueOverlay \
+    AccentColorPrimerBlueOverlay \
     AccentColorPurpleHeatOverlay \
     AccentColorRedOverlay \
     AccentColorRoseOverlay \
