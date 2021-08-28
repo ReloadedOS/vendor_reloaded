@@ -68,3 +68,7 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_BUILD_PROPERTIES += \
     persist.sys.strictmode.disable=true
 endif
+
+# Enable gesture navigation by default
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
