@@ -13,7 +13,8 @@ BRANCH="r"
 
 BLACKLIST="manifest \
 packages/apps/Gallery2 \
-prebuilts/clang/host/linux-x86"
+prebuilts/clang/host/linux-x86 \
+external/libjpeg-turbo"
 
 # fetch tag from user
 read -p "Enter the AOSP tag you wanna merge: " TAG
