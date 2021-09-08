@@ -21,7 +21,7 @@
 #
 
 # WaveOS 4.x - Android 11
-PLATFORM_WAVE_VERSION := 4.7
+PLATFORM_WAVE_VERSION := 4.8
 PLATFORM_WAVE_FLAVOUR := Rasmalai
 
 # Output target zip name
