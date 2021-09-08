@@ -59,17 +59,6 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
-# RCS Service
-PRODUCT_PACKAGES += \
-    rcscommon \
-    rcscommon.xml \
-    rcsservice \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_aidl_static \
-    rcs_service_api \
-    rcs_service_api.xml
-
 # ADB
 PRODUCT_PACKAGES += \
     adb_root
@@ -81,10 +70,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-
-# Fix Google Dialer
-PRODUCT_COPY_FILES +=  \
-    vendor/wave/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \

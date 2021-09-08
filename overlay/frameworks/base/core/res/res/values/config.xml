@@ -40,14 +40,6 @@
         <item>org.microg.nlp</item>
     </string-array>
 
-    <!-- A list of potential packages, in priority order, that may contain an
-         ephemeral resolver. Each package will be be queried for a component
-         that has been granted the PACKAGE_EPHEMERAL_AGENT permission.
-         This may be empty if ephemeral apps are not supported. -->
-    <string-array name="config_ephemeralResolverPackage">
-        <item>com.google.android.gms</item>
-    </string-array>
-
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Disable stock OTA components if installed -->
@@ -74,9 +66,6 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
     </string-array>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
@@ -85,9 +74,6 @@
 
     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
     <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
-	
-    <!-- Control whether Night display is available. -->
-    <bool name="config_nightDisplayAvailable">true</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
@@ -115,23 +101,6 @@
 
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
-
-    <!-- Component name for default assistant on this device -->
-    <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
-
-    <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
-
-    <!-- The component name, flattened to a string, for the default autofill service
-         to  enabled for an user. This service must be trusted, as it can be activated
-         without explicit consent of the user. If no autofill service with the
-          specified name exists on the device, autofill will be disabled by default.
-    -->
-    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
@@ -195,9 +164,6 @@
     <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
          activated. -->
     <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
-
-    <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
-    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 
     <!-- The name of the package that will hold the system gallery role. -->
     <string name="config_systemGallery" translatable="false">com.simplemobiletools.gallery.pro</string>
