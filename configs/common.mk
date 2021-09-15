@@ -155,6 +155,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     FontGoogleSansLatoOverlay \
+    FontGoogleSansRobotoOverlay \
     FontInterOverlay \
     FontManropeOverlay \
     FontOnePlusSansOverlay
