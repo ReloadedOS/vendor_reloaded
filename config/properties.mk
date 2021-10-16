@@ -40,3 +40,7 @@ ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 PRODUCT_SYSTEM_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 endif
+
+# Disable blur on app-launch
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
