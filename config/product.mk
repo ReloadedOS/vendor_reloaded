@@ -190,3 +190,7 @@ PRODUCT_PACKAGES += \
     IconPackRoundedSettingsOverlay \
     IconPackRoundedSystemUIOverlay \
     IconPackRoundedThemePickerOverlay
+
+# Black theme
+PRODUCT_PACKAGES += \
+    BlackThemeOverlay
