@@ -52,3 +52,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Dexopt
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.bg-dexopt=everything
