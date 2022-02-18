@@ -153,3 +153,7 @@ PRODUCT_PACKAGES += \
 # Wallique
 PRODUCT_PACKAGES += \
    Wallique
+
+# Repainter (kdrag0n)
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
