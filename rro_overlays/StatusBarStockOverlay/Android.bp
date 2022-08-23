@@ -1,8 +1,0 @@
-android_app {
-    name: "StatusBarStockOverlay",
-    resource_dirs: ["res"],
-    platform_apis: true,
-    certificate: "platform",
-    privileged: true,
-    manifest: "AndroidManifest.xml",
-}
