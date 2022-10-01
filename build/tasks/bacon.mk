@@ -1,4 +1,6 @@
-# Copyright (C) 2010 Wave-OS
+# Copyright (C) 2017 Unlegacy-Android
+# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 CarbonROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,42 +14,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# -----------------------------------------------------------------
-# Wave OTA update package
+include vendor/reloaded/build/core/colors.mk
 
-# Build system colors
-ifneq ($(BUILD_WITH_COLORS),0)
-    include vendor/wave/build/core/colors.mk
-endif
-
-WAVE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(WAVE_TARGET_ZIP_NAME).zip
-WAVE_TARGET_PACKAGE_FOLDER := $(PRODUCT_OUT)
+RELOADED_ZIP_NAME := $(RELOADED_VERSION).zip
+RELOADED_TARGET_PACKAGE := $(PRODUCT_OUT)/$(RELOADED_ZIP_NAME)
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
-ifndef PROD_OTA_PACKAGE_TARGET
+.PHONY: reloaded
+reloaded: $(INTERNAL_OTA_PACKAGE_TARGET)
+	@echo "ReloadedOS OTA package"
+	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(RELOADED_TARGET_PACKAGE)
+	$(hide) $(MD5) $(RELOADED_TARGET_PACKAGE) > $(RELOADED_TARGET_PACKAGE).md5sum
+	@echo ""
+	@echo -e ${CL_LBL}"═══════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_LBL}"                                                                   "${CL_RST}
+	@echo -e ${CL_LBL}"                                                                   "${CL_RST}
+	@echo -e ${CL_LBL}" ██████╗ ███████╗██╗      ██████╗  █████╗ ██████╗ ███████╗██████╗  "${CL_RST}
+	@echo -e ${CL_LBL}" ██╔══██╗██╔════╝██║     ██╔═══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗ "${CL_RST}
+	@echo -e ${CL_LBL}" ██████╔╝█████╗  ██║     ██║   ██║███████║██║  ██║█████╗  ██║  ██║ "${CL_RST}
+	@echo -e ${CL_LBL}" ██╔══██╗██╔══╝  ██║     ██║   ██║██╔══██║██║  ██║██╔══╝  ██║  ██║ "${CL_RST}
+	@echo -e ${CL_LBL}" ██║  ██║███████╗███████╗╚██████╔╝██║  ██║██████╔╝███████╗██████╔╝ "${CL_RST}
+	@echo -e ${CL_LBL}" ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═════╝  "${CL_RST}
+	@echo -e ${CL_LBL}"                                                                   "${CL_RST}
+	@echo ""
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_CYN}"Package zip:    "${CL_MAG} $(RELOADED_ZIP_NAME) ${CL_RST}
+	@echo -e ${CL_CYN}"Package folder: "${CL_MAG} $(PRODUCT_OUT) ${CL_RST}
+	@echo -e ${CL_CYN}"Package md5:    "${CL_MAG} $(shell cat $(RELOADED_TARGET_PACKAGE).md5sum | awk '{print $$1}') ${CL_RST}
+	@echo -e ${CL_CYN}"Package size:   "${CL_MAG} $(shell du -h $(RELOADED_TARGET_PACKAGE) | awk '{print $$1}') ${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ""
 
 .PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(WAVE_TARGET_PACKAGE)
-	$(hide) $(MD5) $(WAVE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(WAVE_TARGET_PACKAGE).md5sum
-	@echo -e ""
-	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
-	@echo -e ""
-	@echo -e ${CL_LRD}" :::       ::: "${CL_LBL}"     :::     "${CL_LGR}" :::     ::: "${CL_LYL}" :::::::::: "${CL_RST}
-	@echo -e ${CL_LRD}" :+:       :+: "${CL_LBL}"   :+: :+:   "${CL_LGR}" :+:     :+: "${CL_LYL}" :+:        "${CL_RST}
-	@echo -e ${CL_LRD}" +:+       +:+ "${CL_LBL}"  +:+   +:+  "${CL_LGR}" +:+     +:+ "${CL_LYL}" +:+        "${CL_RST}
-	@echo -e ${CL_LRD}" +#+  +:+  +#+ "${CL_LBL}" +#++:++#++: "${CL_LGR}" +#+     +:+ "${CL_LYL}" +#++:++#   "${CL_RST}
-	@echo -e ${CL_LRD}" +#+ +#+#+ +#+ "${CL_LBL}" +#+     +#+ "${CL_LGR}"  +#+   +#+  "${CL_LYL}" +#+        "${CL_RST}
-	@echo -e ${CL_LRD}"  #+#+# #+#+#  "${CL_LBL}" #+#     #+# "${CL_LGR}"   #+#+#+#   "${CL_LYL}" #+#        "${CL_RST}
-	@echo -e ${CL_LRD}"   ###   ###   "${CL_LBL}" ###     ### "${CL_LGR}"     ###     "${CL_LYL}" ########## "${CL_RST}
-	@echo -e ""
-	@echo -e ${CL_CYN}"=============================-Package complete-============================"${CL_RST}
-	@echo -e ${CL_CYN}"Folder : "${CL_MAG} $(WAVE_TARGET_PACKAGE_FOLDER)${CL_RST}
-	@echo -e ${CL_CYN}"ZipName: "${CL_MAG} $(WAVE_TARGET_ZIP_NAME).zip${CL_RST}
-	@echo -e ${CL_CYN}"MD5    : "${CL_MAG}" $(shell cat $(WAVE_TARGET_PACKAGE).md5sum | awk '{print $$1}')"${CL_RST}
-	@echo -e ${CL_CYN}"Size   : "${CL_MAG}" $(shell du -hs $(WAVE_TARGET_PACKAGE) | awk '{print $$1}')"${CL_RST}
-	@echo -e ${CL_CYN}"==========================================================================="${CL_RST}
-	@echo -e ""
-
-endif
+bacon: reloaded

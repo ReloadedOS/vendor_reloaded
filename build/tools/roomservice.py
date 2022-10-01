@@ -3,6 +3,7 @@
 # Copyright (C) 2012-2015, SlimRoms Project
 # Copyright (C) 2018, Resurrection Remix
 # Copyright (C) 2019-2021, WaveOS
+# Copyright (C) 2022, ReloadedOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,15 +29,14 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-custom_local_manifest = ".repo/local_manifests/wave.xml"
+custom_local_manifest = ".repo/local_manifests/reloaded.xml"
 custom_default_revision = "r"
-custom_dependencies = "wave.dependencies"
-org_manifest = "wave"  # leave empty if org is provided in manifest
-org_display = "Wave-Project"  # needed for displaying
+custom_dependencies = "reloaded.dependencies"
+org_manifest = "reloaded"  # leave empty if org is provided in manifest
+org_display = "Reloaded-Temp"  # needed for displaying
 
 default_manifest = ".repo/manifests/default.xml"
-wave_manifest = ".repo/manifests/wave.xml"
-lineage_manifest = ".repo/manifests/lineage.xml"
+reloaded_manifest = ".repo/manifests/reloaded.xml"
 
 github_token = None
 
@@ -137,8 +137,7 @@ def is_in_manifest(project_path):
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
     mlm = load_manifest(default_manifest)
-    wavem = load_manifest(wave_manifest)
-    lineagem = load_manifest(lineage_manifest)
+    reloadedm = load_manifest(reloaded_manifest)
 
     for repo in repos:
 
@@ -169,10 +168,8 @@ def add_to_manifest(repos, fallback_branch=None):
             continue
 
         existing_m_project = None
-        if exists_in_tree(wavem, repo_path) != None:
-            existing_m_project = exists_in_tree(wavem, repo_path)
-        elif exists_in_tree(lineagem, repo_path) != None:
-            existing_m_project = exists_in_tree(lineagem, repo_path)
+        if exists_in_tree(reloadedm, repo_path) != None:
+            existing_m_project = exists_in_tree(reloadedm, repo_path)
         elif exists_in_tree(mlm, repo_path) != None:
             existing_m_project = exists_in_tree(mlm, repo_path)
 

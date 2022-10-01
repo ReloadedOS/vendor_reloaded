@@ -1,2 +1,2 @@
 # Rules for QCOM targets
-include $(TOPDIR)vendor/wave/build/core/qcom_target.mk
+include $(TOPDIR)vendor/reloaded/build/core/qcom_target.mk

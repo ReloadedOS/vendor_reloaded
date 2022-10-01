@@ -1,8 +1,8 @@
-// WaveOS soong configs
+// ReloadedOS soong configs
 
 bootstrap_go_package {
-    name: "soong-wave-generator",
-    pkgPath: "wave/soong/generator",
+    name: "soong-reloaded-generator",
+    pkgPath: "reloaded/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -17,7 +17,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-wave_generator {
+reloaded_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
@@ -48,7 +48,7 @@ cc_library_headers {
 soong_config_module_type {
     name: "target_process_sdk_version_overrides",
     module_type: "cc_defaults",
-    config_namespace: "waveGlobalVars",
+    config_namespace: "reloadedGlobalVars",
     value_variables: ["target_process_sdk_version_override"],
     properties: ["cppflags"],
 }
@@ -56,7 +56,7 @@ soong_config_module_type {
 soong_config_module_type {
     name: "gralloc_10_usage_bits",
     module_type: "cc_defaults",
-    config_namespace: "waveGlobalVars",
+    config_namespace: "reloadedGlobalVars",
     value_variables: ["additional_gralloc_10_usage_bits"],
     properties: ["cppflags"],
 }
@@ -73,7 +73,7 @@ gralloc_10_usage_bits {
 soong_config_module_type {
     name: "legacy_hw_disk_encryption",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     bool_variables: ["legacy_hw_disk_encryption"],
     properties: ["cppflags"],
 }
@@ -99,7 +99,7 @@ target_process_sdk_version_overrides {
 soong_config_module_type {
     name: "target_shim_libs",
     module_type: "cc_defaults",
-    config_namespace: "waveGlobalVars",
+    config_namespace: "reloadedGlobalVars",
     value_variables: ["target_ld_shim_libs"],
     properties: ["cppflags"],
 }
@@ -116,7 +116,7 @@ target_shim_libs {
 soong_config_module_type {
     name: "vendor_init",
     module_type: "cc_defaults",
-    config_namespace: "waveGlobalVars",
+    config_namespace: "reloadedGlobalVars",
     value_variables: ["target_init_vendor_lib"],
     properties: ["whole_static_libs"],
 }
@@ -133,7 +133,7 @@ vendor_init {
 soong_config_module_type {
     name: "surfaceflinger_fod_lib",
     module_type: "cc_defaults",
-    config_namespace: "waveGlobalVars",
+    config_namespace: "reloadedGlobalVars",
     value_variables: ["target_surfaceflinger_fod_lib"],
     properties: [
         "cppflags",
@@ -155,7 +155,7 @@ surfaceflinger_fod_lib {
 soong_config_module_type {
     name: "librmnetctl_pre_uplink",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     bool_variables: ["uses_pre_uplink_features_netmgrd"],
     properties: ["cflags"],
 }
@@ -172,7 +172,7 @@ librmnetctl_pre_uplink {
 soong_config_module_type {
     name: "qti_camera_device",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     bool_variables: ["uses_qti_camera_device"],
     properties: [
         "cppflags",
@@ -193,7 +193,7 @@ qti_camera_device {
 soong_config_module_type {
     name: "camera_boottime_timestamp",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     bool_variables: ["needs_camera_boottime_timestamp"],
     properties: [
         "cflags",
@@ -212,7 +212,7 @@ camera_boottime_timestamp {
 soong_config_module_type {
     name: "extended_compress_format",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     bool_variables: ["supports_extended_compress_format"],
     properties: ["cflags"],
 }
@@ -229,7 +229,7 @@ extended_compress_format {
 soong_config_module_type {
     name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
-    config_namespace: "waveQcomVars",
+    config_namespace: "reloadedQcomVars",
     value_variables: ["qcom_display_headers_namespace"],
     properties: [
         "cppflags",

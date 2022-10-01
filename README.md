@@ -1,1 +1,1 @@
-# WaveOS vendor component
+# ReloadedOS vendor component

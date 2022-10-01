@@ -1,4 +1,4 @@
-# Copyright 2019 Wave-OS
+# Copyright 2022 ReloadedOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,26 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# Handle various build version information.
-#
-# Guarantees that the following are defined:
-#     PLATFORM_WAVE_VERSION
-#     PLATFORM_WAVE_FLAVOUR
-#
+RELOADED_VERSION_BASE := 13.0
+RELOADED_BUILD_TYPE ?= UNOFFICIAL
+RELOADED_BUILD_VARIANT := GAPPS
 
-# WaveOS 5.x - Android 13
-PLATFORM_WAVE_VERSION := 5.0-test1
-PLATFORM_WAVE_FLAVOUR := Tangerine
-PLATFORM_WAVE_FLAVOUR_ABBREV := T
-
-# Example: WaveOS_lisa-T-v5.0-20220824-unofficial.zip
-WAVE_TARGET_ZIP_NAME := WaveOS_$(TARGET_PRODUCT)-$(PLATFORM_WAVE_FLAVOUR_ABBREV)-v$(PLATFORM_WAVE_VERSION)-$(shell date +%Y%m%d)-unofficial
-ifeq ($(VANILLA_BUILD),true)
-WAVE_TARGET_ZIP_NAME := $(WAVE_TARGET_ZIP_NAME)-vanilla
+ifeq ($(RELOADED_BUILD_TYPE),OFFICIAL)
+  OFFICIAL_DEVICES = $(shell cat vendor/reloaded/reloaded.devices)
+    ifneq ($(filter $(TARGET_PRODUCT), $(OFFICIAL_DEVICES)),$(TARGET_PRODUCT))
+      RELOADED_BUILD_TYPE := UNOFFICIAL
+      $(warning Device is not official "$(TARGET_PRODUCT)")
+    endif
 endif
 
+ifeq ($(VANILLA_BUILD),true)
+RELOADED_BUILD_VARIANT := VANILLA
+endif
+
+# Example: Reloaded-13.0-lisa-OFFICIAL-20221001-GAPPS
+RELOADED_VERSION := Reloaded-$(RELOADED_VERSION_BASE)-$(TARGET_PRODUCT)-$(RELOADED_BUILD_TYPE)-$(shell date +%Y%m%d)-$(RELOADED_BUILD_VARIANT)
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.wave.version=$(PLATFORM_WAVE_VERSION) \
-    ro.wave.flavour=$(PLATFORM_WAVE_FLAVOUR) \
-    ro.wave.device=$(TARGET_PRODUCT)
+    ro.reloaded.version=$(RELOADED_VERSION_BASE) \
+    ro.reloaded.build_type=$(RELOADED_BUILD_TYPE) \
+    ro.reloaded.build_variant=$(RELOADED_BUILD_VARIANT)

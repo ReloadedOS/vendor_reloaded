@@ -1,4 +1,4 @@
-function __print_wave_functions_help() {
+function __print_reloaded_functions_help() {
 cat <<EOF
 Additional functions:
 - mka:             Builds using all available CPUs
@@ -8,14 +8,14 @@ EOF
 
 # Make using all available CPUs
 function mka() {
-    m -j $(nproc --all) "$@"
+    m "$@"
 }
 
 function brunch()
 {
-    lunch wave_$1-userdebug
+    lunch $1-userdebug
     if [ $? -eq 0 ]; then
-        time mka bacon
+        time m reloaded
     else
         echo "Lunch failed!"
         return 1
