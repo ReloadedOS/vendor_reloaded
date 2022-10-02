@@ -2,8 +2,8 @@
 include vendor/reloaded/config/BoardConfigKernel.mk
 
 # QCOM
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/reloaded/config/BoardConfigQcom.mk
+ifneq ($(TARGET_EXCLUDES_QC_COMMON),true)
+include device/qcom/common/BoardConfigQcom.mk
 endif
 
 # SEPolicy

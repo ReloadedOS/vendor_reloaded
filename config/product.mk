@@ -13,6 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Qualcomm Common configuration
+ifneq ($(TARGET_EXCLUDES_QC_COMMON),true)
+$(call inherit-product, device/qcom/common/common.mk)
+endif
+
 # ReloadedOS branding
 $(call inherit-product, vendor/reloaded/config/branding.mk)
 
