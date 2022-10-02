@@ -57,3 +57,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.first-boot=quicken \
     pm.dexopt.bg-dexopt=everything
+
+# Privileged app permissions
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
