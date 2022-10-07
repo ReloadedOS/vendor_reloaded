@@ -18,6 +18,9 @@ ifneq ($(TARGET_EXCLUDES_QC_COMMON),true)
 $(call inherit-product, device/qcom/common/common.mk)
 endif
 
+# SDClang
+$(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
+
 # ReloadedOS branding
 $(call inherit-product, vendor/reloaded/config/branding.mk)
 
