@@ -51,3 +51,7 @@ SOONG_CONFIG_reloadedGlobalVars_uses_pre_uplink_features_netmgrd := $(TARGET_USE
 SOONG_CONFIG_NAMESPACES += aosp_vs_qva
 SOONG_CONFIG_aosp_vs_qva += aosp_or_qva
 SOONG_CONFIG_aosp_vs_qva_aosp_or_qva := qva
+
+ifneq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += packages/modules/Bluetooth/android/app
+endif
