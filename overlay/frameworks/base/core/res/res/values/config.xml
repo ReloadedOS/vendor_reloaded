@@ -16,6 +16,47 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/ext.jar"</item>
+        <item>"/system/framework/QPerformance.jar"</item>
+        <item>"/system/framework/QXPerformance.jar"</item>
+        <item>"/system/framework/UxPerformance.jar"</item>
+        <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system/lib/libRScpp.so"</item>
+        <item>"/system/lib/libRS.so"</item>
+        <item>"/system/lib/libRS_internal.so"</item>
+        <item>"/system/lib/libbcinfo.so"</item>
+        <item>"/system/lib/libRSDriver.so"</item>
+        <item>"/system/lib/libRSCpuRef.so"</item>
+        <item>"/system/lib/libblas.so"</item>
+        <item>"/system/lib64/libRScpp.so"</item>
+        <item>"/system/lib64/libRS.so"</item>
+        <item>"/system/lib64/libRS_internal.so"</item>
+        <item>"/system/lib64/libbcinfo.so"</item>
+        <item>"/system/lib64/libRSDriver.so"</item>
+        <item>"/system/lib64/libRSCpuRef.so"</item>
+        <item>"/system/lib64/libblas.so"</item>
+        <item>"/vendor/lib/libcamxexternalformatutils.so"</item>
+        <item>"/vendor/lib/libCB.so"</item>
+        <item>"/vendor/lib/libgsl.so"</item>
+        <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
+        <item>"/vendor/lib64/libipebpsstriping.so"</item>
+        <item>"/vendor/lib64/libCB.so"</item>
+        <item>"/vendor/lib64/libgsl.so"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+    </string-array>
+
+    <!-- True if home app should be pinned via Pinner Service -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">true</bool>
+
     <!-- Package name(s) containing location provider support.
          These packages can contain services implementing location providers,
          such as the Geocode Provider, Network Location Provider, and Fused
@@ -89,9 +130,6 @@
 
     <!-- Flag indicating whether we should enable smart battery. -->
     <bool name="config_smart_battery_available">true</bool>
-
-    <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
