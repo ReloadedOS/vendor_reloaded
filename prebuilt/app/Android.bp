@@ -1,5 +1,15 @@
 //
-// Prebuilt apps for WaveOS
+// Prebuilt apps for ReloadedOS
 //
+
+// Wallique
+android_app_import {
+    name: "Wallique",
+    apk: "Wallique.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
 
 // Placeholder for future
