@@ -48,6 +48,11 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA ?= true
+SYSTEMUI_OPTIMIZE_JAVA ?= true
+
 # Google stuff
 ifneq ($(VANILLA_BUILD),true)
 # GMS
@@ -146,6 +151,5 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor
 
 # Wallique
-
 PRODUCT_PACKAGES += \
    Wallique
