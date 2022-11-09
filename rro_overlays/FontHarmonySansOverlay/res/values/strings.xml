@@ -16,7 +16,7 @@
 -->
 <resources>
 
-    <!-- Inter overlay -->
-    <string name="font_inter_overlay" translatable="false">Inter</string>
+    <!-- Huawei HarmonyOS Sans font overlay -->
+    <string name="font_harmonyos_sans_overlay" translatable="false">HarmonyOS Sans</string>
 
 </resources>

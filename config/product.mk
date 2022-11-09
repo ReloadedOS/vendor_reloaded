@@ -86,21 +86,21 @@ PRODUCT_PACKAGES += \
     ImmersiveNavigationOverlay
 
 # Fonts
-ifeq (0,1) # Not including them for now
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/reloaded/prebuilt/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-    $(call find-copy-subdir-files,*,vendor/reloaded/prebuilt/fonts-system/,$(TARGET_COPY_OUT_SYSTEM)/fonts) \
     vendor/reloaded/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 PRODUCT_PACKAGES += \
     FontGoogleSansLatoOverlay \
-    FontGoogleSansRobotoOverlay \
+    FontHarmonySansOverlay \
     FontInterOverlay \
     FontManropeOverlay \
-    FontOnePlusSansOverlay
+    FontOnePlusOverlay \
+    FontOppoSansOverlay \
+    FontRobotoOverlay \
+    FontUrbanistOverlay
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
-endif
 
 # Themes
 PRODUCT_PACKAGES += \

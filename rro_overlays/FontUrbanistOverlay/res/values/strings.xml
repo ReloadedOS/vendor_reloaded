@@ -16,7 +16,7 @@
 -->
 <resources>
 
-    <!-- Inter overlay -->
-    <string name="font_inter_overlay" translatable="false">Inter</string>
+    <!-- Urbanist overlay -->
+    <string name="font_urbanist_overlay" translatable="false">Urbanist</string>
 
 </resources>
