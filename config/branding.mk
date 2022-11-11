@@ -12,7 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+CLO_REVISION := LA.QSSI.13.0.r1-07200.01-qssi.0
+
 RELOADED_VERSION_BASE := 13.0
+RELOADED_BUILD_DATE := $(shell date +%Y%m%d)
 RELOADED_BUILD_TYPE ?= UNOFFICIAL
 RELOADED_BUILD_VARIANT := GAPPS
 
@@ -29,9 +32,12 @@ RELOADED_BUILD_VARIANT := VANILLA
 endif
 
 # Example: Reloaded-13.0-lisa-OFFICIAL-20221001-GAPPS
-RELOADED_VERSION := Reloaded-$(RELOADED_VERSION_BASE)-$(TARGET_PRODUCT)-$(RELOADED_BUILD_TYPE)-$(shell date +%Y%m%d)-$(RELOADED_BUILD_VARIANT)
+RELOADED_VERSION := Reloaded-$(RELOADED_VERSION_BASE)-$(TARGET_PRODUCT)-$(RELOADED_BUILD_TYPE)-$(RELOADED_BUILD_DATE)-$(RELOADED_BUILD_VARIANT)
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.reloaded.version=$(RELOADED_VERSION_BASE) \
+    ro.reloaded.build_date=$(RELOADED_BUILD_DATE) \
     ro.reloaded.build_type=$(RELOADED_BUILD_TYPE) \
-    ro.reloaded.build_variant=$(RELOADED_BUILD_VARIANT)
+    ro.reloaded.build_variant=$(RELOADED_BUILD_VARIANT) \
+    ro.reloaded.clo_revision=$(CLO_REVISION) \
+    ro.reloaded.device=$(TARGET_PRODUCT)
