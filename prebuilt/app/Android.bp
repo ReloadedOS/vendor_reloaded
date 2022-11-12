@@ -7,6 +7,7 @@ android_app_import {
     name: "Wallique",
     apk: "Wallique.apk",
     presigned: true,
+    product_specific: true,
     dex_preopt: {
         enabled: false,
     },
