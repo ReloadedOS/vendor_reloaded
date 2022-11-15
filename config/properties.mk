@@ -29,6 +29,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# GMS spoofing fingerprint
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.gms_fingerprint=google/angler/angler:6.0/MDB08L/2343525:user/release-keys
+
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
