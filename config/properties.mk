@@ -74,3 +74,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Privileged app permissions
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
+
+# Face Unlock
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
