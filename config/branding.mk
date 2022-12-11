@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CLO_REVISION := LA.QSSI.13.0.r1-07600.02-qssi.0
+CLO_REVISION := LA.QSSI.13.0.r1-08200-qssi.0
 
 RELOADED_VERSION_BASE := 13.0
 RELOADED_BUILD_DATE := $(shell date +%Y%m%d)
