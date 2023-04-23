@@ -195,17 +195,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BlackThemeOverlay
 
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
-
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/reloaded/prebuilt/etc/permissions/default_permissions_com.google.android.deskclock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default_permissions_com.google.android.deskclock.xml
