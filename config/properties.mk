@@ -74,3 +74,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Privileged app permissions
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
+
+# Set default refresh rate threshold
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60
