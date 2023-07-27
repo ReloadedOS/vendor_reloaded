@@ -71,6 +71,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# Face Unlock
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
+
 # Set default refresh rate threshold
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.frame_rate_multiple_threshold=60
