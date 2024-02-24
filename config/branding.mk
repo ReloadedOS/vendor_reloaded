@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CLO_REVISION := LA.QSSI.13.0.r1-11900.01-qssi.0
+CLO_REVISION := LA.QSSI.14.0.r1-12000-qssi.0
 
-RELOADED_VERSION_BASE := 13.1
+RELOADED_VERSION_BASE := 14.0
 RELOADED_BUILD_DATE := $(shell date +%Y%m%d)
 RELOADED_BUILD_TYPE ?= UNOFFICIAL
 RELOADED_BUILD_VARIANT := GAPPS
