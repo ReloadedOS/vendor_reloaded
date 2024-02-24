@@ -143,6 +143,13 @@ PRODUCT_BOOT_JARS += \
     tcmiface \
     telephony-ext
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+    libtextclassifier_annotator_en_model \
+    libtextclassifier_annotator_universal_model \
+    libtextclassifier_actions_suggestions_universal_model \
+    libtextclassifier_lang_id_model
+
 # QTI vendor framework detection
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
