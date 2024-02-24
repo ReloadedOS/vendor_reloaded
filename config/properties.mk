@@ -73,4 +73,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Set default refresh rate threshold
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.frame_rate_multiple_threshold=60
+    debug.sf.frame_rate_multiple_threshold=60 \
+    ro.surface_flinger.enable_frame_rate_override=false
