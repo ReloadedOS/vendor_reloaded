@@ -102,6 +102,10 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
+
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker
