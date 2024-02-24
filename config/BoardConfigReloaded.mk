@@ -6,6 +6,12 @@ ifneq ($(TARGET_EXCLUDES_QC_COMMON),true)
 include device/qcom/common/BoardConfigQcom.mk
 endif
 
+# Dex2oat
+ifeq ($(TARGET_CPU_VARIANT),cortex-a510)
+    DEX2OAT_TARGET_CPU_VARIANT := cortex-a76
+    DEX2OAT_TARGET_CPU_VARIANT_RUNTIME := cortex-a76
+endif
+
 # SEPolicy
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
 ifeq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
