@@ -174,10 +174,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    Wallique
 
-# Repainter (kdrag0n)
-PRODUCT_PACKAGES += \
-    RepainterServicePriv
-
 # Icon packs
 PRODUCT_PACKAGES += \
     IconPackCircularAndroidOverlay \
