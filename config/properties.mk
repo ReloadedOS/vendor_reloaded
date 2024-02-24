@@ -75,3 +75,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.frame_rate_multiple_threshold=60 \
     ro.surface_flinger.enable_frame_rate_override=false
+
+# Volume panel dialog - SystemUI
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    sys.fflag.override.settings_volume_panel_in_systemui=true
