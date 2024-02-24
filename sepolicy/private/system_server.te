@@ -5,4 +5,7 @@ allow system_server pocket_service:service_manager { add find };
 
 allow system_server adbroot_service:service_manager find;
 
+# CachedAppOptimizer
+allow system_server zygote_tmpfs:file rw_file_perms;
+
 add_service(system_server, applock_service);
