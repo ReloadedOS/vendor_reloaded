@@ -50,10 +50,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 endif
 
-# Disable blur on app-launch
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
-
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
