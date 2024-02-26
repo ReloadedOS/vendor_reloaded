@@ -21,6 +21,9 @@ endif
 # SDClang
 $(call inherit-product, vendor/qcom/sdclang/config/SnapdragonClang.mk)
 
+# Certification
+$(call inherit-product-if-exists, vendor/reloaded/certification/config.mk)
+
 # ReloadedOS branding
 $(call inherit-product, vendor/reloaded/config/branding.mk)
 
