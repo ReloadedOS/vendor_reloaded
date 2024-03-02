@@ -31,4 +31,7 @@
          screenshot has been saved to work profile. If blank, a default icon will be shown. -->
     <string name="config_sceenshotWorkProfileFilesApp" translatable="false">com.android.documentsui/.files.LauncherActivity</string>
 
+    <!-- Display Volte icon -->
+    <bool name="config_display_volte">false</bool>
+
 </resources>
