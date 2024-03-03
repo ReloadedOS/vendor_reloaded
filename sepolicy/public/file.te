@@ -1,2 +1,5 @@
 # Fastcharge
 type sysfs_fastcharge, sysfs_type, fs_type;
+
+# PowerShare
+type sysfs_powershare, sysfs_type, fs_type;

@@ -54,6 +54,23 @@ cc_library_headers {
     defaults: ["generated_kernel_header_defaults"],
 }
 
+soong_config_module_type {
+    name: "powershare_node",
+    module_type: "cc_defaults",
+    config_namespace: "reloadedGlobalVars",
+    value_variables: ["powershare_node"],
+    properties: ["cppflags"],
+}
+
+powershare_node {
+    name: "powershare_node_defaults",
+    soong_config_variables: {
+        powershare_node: {
+            cppflags: ["-DPOWERSHARE_NODE=\"%s\""],
+        },
+    },
+}
+
 // Target platform agnostic config modules
 soong_config_module_type {
     name: "target_process_sdk_version_overrides",
@@ -159,6 +176,26 @@ camera_boottime_timestamp {
     soong_config_variables: {
         needs_camera_boottime_timestamp: {
             cflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
+        },
+    },
+}
+
+cc_defaults {
+    name: "aospa_aidl_defaults",
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wextra",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    target: {
+        host: {
+            cflags: [
+                "-O0",
+                "-g",
+            ],
         },
     },
 }

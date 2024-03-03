@@ -34,6 +34,10 @@ $(call inherit-product, vendor/reloaded/config/properties.mk)
 # TODO: Convert to RRO
 PRODUCT_PACKAGE_OVERLAYS += vendor/reloaded/overlay
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+     vendor/reloaded/config/reloaded_vendor_framework_compatibility_matrix.xml
+
 # Boot animation
 PRODUCT_COPY_FILES += \
     vendor/reloaded/prebuilt/media/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
