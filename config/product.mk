@@ -228,3 +228,7 @@ endif
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/reloaded/prebuilt/etc/permissions/default_permissions_com.google.android.deskclock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default_permissions_com.google.android.deskclock.xml
+
+# WiFi
+PRODUCT_PACKAGES += \
+    libwpa_client
