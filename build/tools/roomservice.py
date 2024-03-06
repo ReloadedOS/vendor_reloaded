@@ -30,10 +30,10 @@ import urllib.parse
 import urllib.request
 
 custom_local_manifest = ".repo/local_manifests/reloaded.xml"
-custom_default_revision = "r"
+custom_default_revision = "u"
 custom_dependencies = "reloaded.dependencies"
-org_manifest = "reloaded"  # leave empty if org is provided in manifest
-org_display = "Reloaded-Temp"  # needed for displaying
+org_manifest = "reloaded-devices"  # leave empty if org is provided in manifest
+org_display = "Reloaded-Devices"  # needed for displaying
 
 default_manifest = ".repo/manifests/default.xml"
 reloaded_manifest = ".repo/manifests/reloaded.xml"
