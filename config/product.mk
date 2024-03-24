@@ -31,8 +31,7 @@ $(call inherit-product, vendor/reloaded/config/branding.mk)
 $(call inherit-product, vendor/reloaded/config/properties.mk)
 
 # Overlays
-# TODO: Convert to RRO
-PRODUCT_PACKAGE_OVERLAYS += vendor/reloaded/overlay
+$(call inherit-product, vendor/reloaded/overlay/overlays.mk)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
@@ -92,24 +91,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Camera
 
-# Immersive Navigation
-PRODUCT_PACKAGES += \
-    ImmersiveNavigationOverlay
-
 # Fonts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/reloaded/prebuilt/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/reloaded/prebuilt/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
-
-PRODUCT_PACKAGES += \
-    FontGoogleSansLatoOverlay \
-    FontHarmonySansOverlay \
-    FontInterOverlay \
-    FontManropeOverlay \
-    FontOnePlusOverlay \
-    FontOppoSansOverlay \
-    FontRobotoOverlay \
-    FontUrbanistOverlay
 
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 
@@ -180,43 +165,6 @@ PRODUCT_PACKAGES += \
 # Wallique
 PRODUCT_PACKAGES += \
    Wallique
-
-# Icon packs
-PRODUCT_PACKAGES += \
-    IconPackCircularAndroidOverlay \
-    IconPackCircularLauncherOverlay \
-    IconPackCircularSettingsOverlay \
-    IconPackCircularSystemUIOverlay \
-    IconPackCircularThemePickerOverlay \
-    IconPackVictorAndroidOverlay \
-    IconPackVictorLauncherOverlay \
-    IconPackVictorSettingsOverlay \
-    IconPackVictorSystemUIOverlay \
-    IconPackVictorThemePickerOverlay \
-    IconPackSamAndroidOverlay \
-    IconPackSamLauncherOverlay \
-    IconPackSamSettingsOverlay \
-    IconPackSamSystemUIOverlay \
-    IconPackSamThemePickerOverlay \
-    IconPackKaiAndroidOverlay \
-    IconPackKaiLauncherOverlay \
-    IconPackKaiSettingsOverlay \
-    IconPackKaiSystemUIOverlay \
-    IconPackKaiThemePickerOverlay \
-    IconPackFilledAndroidOverlay \
-    IconPackFilledLauncherOverlay \
-    IconPackFilledSettingsOverlay \
-    IconPackFilledSystemUIOverlay \
-    IconPackFilledThemePickerOverlay \
-    IconPackRoundedAndroidOverlay \
-    IconPackRoundedLauncherOverlay \
-    IconPackRoundedSettingsOverlay \
-    IconPackRoundedSystemUIOverlay \
-    IconPackRoundedThemePickerOverlay
-
-# Black theme
-PRODUCT_PACKAGES += \
-    BlackThemeOverlay
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true

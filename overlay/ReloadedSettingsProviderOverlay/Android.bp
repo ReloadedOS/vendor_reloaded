@@ -1,0 +1,10 @@
+//
+// Copyright (C) 2024 ReloadedOS
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "ReloadedSettingsProviderOverlay",
+    product_specific: true,
+}
